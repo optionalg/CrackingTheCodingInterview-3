@@ -24,9 +24,12 @@ reverse("Hello")
 def premutation(s1,s2):
 	directory = list(s2)
 	for i in s1:
-		for d in s2:
-			if i == d:
-				print True
-	return False
+		if i in directory:
+			directory.remove(i)
+	if len(directory) == 0:
+		print True
+	else:
+		print False			
 	
-premutation("fdf","god")		
+
+premutation("dog","god")		
