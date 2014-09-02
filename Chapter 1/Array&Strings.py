@@ -20,6 +20,7 @@ def reverse(s):
 reverse("Hello")			
 
 #1.3 Given two string. write a method to decide if one is the premutation of the others
+#Not Being able to use any data Structure 
 
 def premutation(s1,s2):
 	directory = list(s2)
@@ -32,4 +33,33 @@ def premutation(s1,s2):
 		print False			
 	
 
-premutation("dog","god")		
+premutation("dog","god")
+
+#Using DataStructure
+
+#1.4 
+#Using replace Function! Cheating 
+def Space_Replacer(s, lengthOfString):
+	m = s.replace(" ","%2")
+	print m
+
+#using 	
+Space_Replacer("Mr John Smith ", 13)		
+
+
+# using a list to store each char and change space to '%20', then join list into a string
+def replaceSpace(string):
+	charList = []
+	for char in string:
+		if char == ' ':
+			char = '%20'
+		charList.append(char)
+	return ''.join(charList)
+
+#test
+inputStr = " Smith    q m "
+expectOutput = "%20Smith%20%20%20%20q%20m%20"
+if replaceSpace(inputStr) == expectOutput:
+	print "test passed"
+else:
+	print "test failed"			
