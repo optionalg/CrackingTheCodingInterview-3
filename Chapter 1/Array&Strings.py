@@ -62,4 +62,19 @@ expectOutput = "%20Smith%20%20%20%20q%20m%20"
 if replaceSpace(inputStr) == expectOutput:
 	print "test passed"
 else:
-	print "test failed"			
+	print "test failed"
+
+#1.5  Implement a method to perform basic string compression  using the counts of repeated characters. 
+
+def StringComparession(s):
+	m = list(s)
+	m.sort()
+	count = 0
+	d = []
+	jj = 1
+	for i in range(0,len(m)-1):
+		if m[i] == m[i+1]:
+			d.append[m];
+	print d
+	
+StringComparession("aabbcc")
